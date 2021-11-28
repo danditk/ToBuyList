@@ -25,6 +25,7 @@ namespace ToBuyList
                 {
                     listBox1.Items.Add(textBox1.Text);
                     textBox1.Clear();
+                    ProcesBarActualise();
                 }
                 else
                 {
@@ -37,14 +38,29 @@ namespace ToBuyList
             }
         }
 
+        private void ProcesBarActualise()
+        {
+            int i = listBox1.Items.Count;
+            progressBar1.Value = i * 10;
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            int i = listBox1.SelectedIndex;
+            if (i != -1)
+            {
+                listBox1.Items.RemoveAt(i);
+                ProcesBarActualise();
+            }
+            else
+            {
+                MessageBox.Show("Żaden element nie został zaznaczony", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            listBox1.Items.Clear();
         }
     }
 }
