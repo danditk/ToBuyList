@@ -42,14 +42,14 @@ namespace ToBuyList
             this.listBox1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 29;
-            this.listBox1.Location = new System.Drawing.Point(35, 71);
+            this.listBox1.Location = new System.Drawing.Point(12, 71);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(352, 352);
             this.listBox1.TabIndex = 0;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(35, 22);
+            this.progressBar1.Location = new System.Drawing.Point(12, 22);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(352, 33);
             this.progressBar1.TabIndex = 1;
@@ -57,43 +57,46 @@ namespace ToBuyList
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(35, 429);
+            this.textBox1.Location = new System.Drawing.Point(12, 429);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(352, 37);
             this.textBox1.TabIndex = 2;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(35, 473);
+            this.btnAdd.Location = new System.Drawing.Point(12, 472);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(352, 32);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Dodaj";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(35, 511);
+            this.btnDelete.Location = new System.Drawing.Point(12, 510);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(173, 32);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Usuń";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(214, 511);
+            this.btnClear.Location = new System.Drawing.Point(191, 510);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(173, 32);
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Wyczyść";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 558);
+            this.ClientSize = new System.Drawing.Size(378, 558);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -101,7 +104,7 @@ namespace ToBuyList
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Lista zakupów";
             this.ResumeLayout(false);
             this.PerformLayout();
 

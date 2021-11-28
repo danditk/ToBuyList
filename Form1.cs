@@ -16,5 +16,35 @@ namespace ToBuyList
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (progressBar1.Value < 100)
+            {
+                if (textBox1.Text.Length > 0)
+                {
+                    listBox1.Items.Add(textBox1.Text);
+                    textBox1.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Wartość jest pusta", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lista jest pełna!", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
