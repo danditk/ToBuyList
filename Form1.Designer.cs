@@ -76,7 +76,7 @@ namespace ToBuyList
             // 
             this.btnDelete.Location = new System.Drawing.Point(12, 510);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(173, 32);
+            this.btnDelete.Size = new System.Drawing.Size(227, 32);
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Usuń";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -84,9 +84,9 @@ namespace ToBuyList
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(191, 510);
+            this.btnClear.Location = new System.Drawing.Point(245, 510);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(173, 32);
+            this.btnClear.Size = new System.Drawing.Size(119, 32);
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Wyczyść";
             this.btnClear.UseVisualStyleBackColor = true;

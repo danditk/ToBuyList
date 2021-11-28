@@ -23,6 +23,15 @@ namespace ToBuyList
             {
                 if (textBox1.Text.Length > 0)
                 {
+                    if (listBox1.Items.Contains(textBox1.Text))
+                    {
+                        var decision = MessageBox.Show("Element jest już na liście, czy chcesz dodać go ponownie?", "Ostrzeżenie!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (decision == DialogResult.No)
+                        {
+                            textBox1.Clear();
+                            return;
+                        }
+                    }
                     listBox1.Items.Add(textBox1.Text);
                     textBox1.Clear();
                     ProcesBarActualise();
@@ -60,7 +69,9 @@ namespace ToBuyList
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
+            var decision = MessageBox.Show("Czy na pewno chcesz wyczyścić całą listę", "Ostrzeżenie!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (decision == DialogResult.Yes) listBox1.Items.Clear();
+            ProcesBarActualise();
         }
     }
 }
